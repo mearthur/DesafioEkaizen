@@ -5,7 +5,11 @@ export const unidades: Unidade[] = [
   { id: "u2", nome: "Filial Renascença", cidade: "São Luís" },
   { id: "u3", nome: "Filial Cohama", cidade: "São Luís" },
   { id: "u4", nome: "Loja Imperatriz", cidade: "Imperatriz" },
-  { id: "u5", nome: "Filial São José de Ribamar", cidade: "São José de Ribamar" },
+  {
+    id: "u5",
+    nome: "Filial São José de Ribamar",
+    cidade: "São José de Ribamar",
+  },
 ];
 
 export const areas: Area[] = [
@@ -38,8 +42,8 @@ export const pendencias: Pendencia[] = [
     areaResponsavelId: "a1",
     status: "em_andamento",
     prioridade: "alta",
-    criadaEm: "2026-09-12T09:00:00Z",
-    atualizadaEm: "2026-09-13T14:00:00Z",
+    criadaEm: "2026-09-08T09:00:00Z", // era "2026-09-12T09:00:00Z"
+    atualizadaEm: "2026-09-10T14:00:00Z", // era "2026-09-13T14:00:00Z"
     criterioConclusao: "Equipamento religado e temperatura estável por 24h.",
     historico: [
       {
@@ -50,7 +54,7 @@ export const pendencias: Pendencia[] = [
       },
       {
         id: "h2",
-        data: "2026-09-13T14:00:00Z",
+        data: "2026-09-10T14:00:00Z", // era "2026-09-13T14:00:00Z"
         autorId: "p1",
         descricao: "Técnico acionado, peça de reposição solicitada.",
       },
@@ -66,8 +70,8 @@ export const pendencias: Pendencia[] = [
     areaResponsavelId: "a2",
     status: "aguardando_area",
     prioridade: "alta",
-    criadaEm: "2026-08-28T11:00:00Z",
-    atualizadaEm: "2026-08-30T16:00:00Z",
+    criadaEm: "2026-08-30T11:00:00Z", // era "2026-08-28T11:00:00Z"
+    atualizadaEm: "2026-09-06T10:00:00Z", // era "2026-08-30T16:00:00Z"
     aguardandoAreaId: "a3",
     motivoEspera:
       "TI precisa que o Comercial confirme com o fornecedor do PDV se houve mudança no contrato de integração.",
@@ -75,15 +79,16 @@ export const pendencias: Pendencia[] = [
     historico: [
       {
         id: "h3",
-        data: "2026-08-28T11:00:00Z",
+        data: "2026-08-30T11:00:00Z",
         autorId: "p2",
         descricao: "Pendência registrada via planilha semanal.",
       },
       {
         id: "h4",
-        data: "2026-08-30T16:00:00Z",
+        data: "2026-09-06T10:00:00Z",
         autorId: "p2",
-        descricao: "Bloqueado aguardando retorno do Comercial sobre contrato do fornecedor.",
+        descricao:
+          "Bloqueado aguardando retorno do Comercial sobre contrato do fornecedor.",
       },
     ],
   },
@@ -125,15 +130,16 @@ export const pendencias: Pendencia[] = [
     areaResponsavelId: "a1",
     status: "aberta",
     prioridade: "alta",
-    criadaEm: "2026-09-01T08:00:00Z",
-    atualizadaEm: "2026-09-01T08:00:00Z",
+    criadaEm: "2026-09-08T08:00:00Z", // era "2026-09-01T08:00:00Z"
+    atualizadaEm: "2026-09-08T08:00:00Z", // era "2026-09-01T08:00:00Z"
     criterioConclusao: "Reparo concluído e sem infiltração após 2 chuvas.",
     historico: [
       {
         id: "h7",
-        data: "2026-09-01T08:00:00Z",
+        data: "2026-09-08T08:00:00Z",
         autorId: "p5",
-        descricao: "Pendência criada. Ainda sem responsável designado para execução.",
+        descricao:
+          "Pendência criada. Ainda sem responsável designado para execução.",
       },
     ],
   },
@@ -148,12 +154,13 @@ export const pendencias: Pendencia[] = [
     areaResponsavelId: "a2",
     status: "aguardando_area",
     prioridade: "media",
-    criadaEm: "2026-08-20T13:00:00Z",
-    atualizadaEm: "2026-08-22T10:00:00Z",
+    criadaEm: "2026-08-20T13:00:00Z", // sem mudança
+    atualizadaEm: "2026-08-30T10:00:00Z", // era "2026-08-22T10:00:00Z"
     aguardandoAreaId: "a4",
     motivoEspera:
       "TI depende do Financeiro validar as regras de conciliação antes de ajustar a integração.",
-    criterioConclusao: "Relatório de conciliação batendo por 2 ciclos consecutivos.",
+    criterioConclusao:
+      "Relatório de conciliação batendo por 2 ciclos consecutivos.",
     historico: [
       {
         id: "h8",
@@ -163,7 +170,7 @@ export const pendencias: Pendencia[] = [
       },
       {
         id: "h9",
-        data: "2026-08-22T10:00:00Z",
+        data: "2026-08-30T10:00:00Z",
         autorId: "p6",
         descricao: "Aguardando validação de regras junto ao Financeiro.",
       },
@@ -179,19 +186,19 @@ export const pendencias: Pendencia[] = [
     areaResponsavelId: "a2",
     status: "em_andamento",
     prioridade: "media",
-    criadaEm: "2026-09-13T15:00:00Z",
-    atualizadaEm: "2026-09-14T08:00:00Z",
+    criadaEm: "2026-09-11T15:00:00Z", // era "2026-09-13T15:00:00Z"
+    atualizadaEm: "2026-09-12T08:00:00Z", // era "2026-09-14T08:00:00Z"
     criterioConclusao: "6 câmeras gravando e visíveis no painel central.",
     historico: [
       {
         id: "h10",
-        data: "2026-09-13T15:00:00Z",
+        data: "2026-09-11T15:00:00Z", // era "2026-09-13T15:00:00Z"
         autorId: "p2",
         descricao: "Pendência criada.",
       },
       {
         id: "h11",
-        data: "2026-09-14T08:00:00Z",
+        data: "2026-09-12T08:00:00Z", // era "2026-09-14T08:00:00Z"
         autorId: "p2",
         descricao: "Diagnóstico iniciado remotamente.",
       },
@@ -207,13 +214,13 @@ export const pendencias: Pendencia[] = [
     areaResponsavelId: "a3",
     status: "aberta",
     prioridade: "baixa",
-    criadaEm: "2026-09-05T09:00:00Z",
-    atualizadaEm: "2026-09-05T09:00:00Z",
+    criadaEm: "2026-09-10T09:00:00Z", // era "2026-09-05T09:00:00Z"
+    atualizadaEm: "2026-09-10T09:00:00Z", // era "2026-09-05T09:00:00Z"
     criterioConclusao: "Treinamento realizado com toda a equipe da unidade.",
     historico: [
       {
         id: "h12",
-        data: "2026-09-05T09:00:00Z",
+        data: "2026-09-10T09:00:00Z",
         autorId: "p3",
         descricao: "Pendência criada, ainda sem data de treinamento agendada.",
       },
