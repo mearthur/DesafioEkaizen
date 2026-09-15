@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Pendências de Campo
 
-## Getting Started
+Desafio técnico frontend: uma experiência para acompanhar pendências geradas
+por visitas de campo em uma empresa com várias unidades, dando ao gestor
+visão do conjunto e a quem executa clareza de prioridade e contexto.
 
-First, run the development server:
+## Como rodar
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
+pnpm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Telas
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **`/`** — Dashboard: visão geral com distribuição por status e os pontos
+  que merecem atenção antes da reunião de acompanhamento (pendências paradas
+  há muito tempo ou dependendo de outra área).
+- **`/board`** — Kanban por status, com destaque visual (roxo) para o que
+  está bloqueado esperando outra área.
+- **`/pendencias/[id]`** — Detalhe da pendência: contexto completo, critério
+  de conclusão e histórico.
 
-## Learn More
+## Decisões de recorte
 
-To learn more about Next.js, take a look at the following resources:
+- **Dados fictícios** em `src/lib/mock-data.ts`, como pedido no enunciado —
+  sem backend/banco de dados.
+- **`aguardandoAreaId` e `motivoEspera`** no modelo de dados: resolve
+  diretamente a dor de "pendências que ficam paradas sem que ninguém
+  perceba" descrita no case.
+- **`criterioConclusao`**: cada pendência define explicitamente o que
+  significa encerrá-la, resolvendo a ambiguidade citada no enunciado.
+- **`diasParada` e `estaAtrasada`** são calculados em `src/lib/utils.ts` a
+  partir de uma data de referência fixa (só para a demo ficar consistente),
+  não vêm hardcoded no mock.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Next.js 15 (App Router), TypeScript, Tailwind CSS 4, Recharts (gráfico do
+dashboard).
