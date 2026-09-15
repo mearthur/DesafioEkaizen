@@ -16,7 +16,7 @@ export interface Unidade {
 
 export interface Area {
   id: string;
-  nome: string; // ex: Manutenção, TI, Comercial, Financeiro
+  nome: string;
 }
 
 export interface Pessoa {
@@ -28,9 +28,9 @@ export interface Pessoa {
 
 export interface EventoHistorico {
   id: string;
-  data: string; // ISO date
+  data: string;
   autorId: string;
-  descricao: string; // ex: "Status alterado de 'aberta' para 'em_andamento'"
+  descricao: string;
 }
 
 export interface Pendencia {
@@ -38,27 +38,23 @@ export interface Pendencia {
   titulo: string;
   descricao: string;
   unidadeId: string;
-  origem: string; // ex: "Visita de campo - 12/09"
+  origem: string;
   responsavelId: string;
   areaResponsavelId: string;
   status: StatusPendencia;
   prioridade: Prioridade;
-  criadaEm: string; // ISO date
-  atualizadaEm: string; // ISO date
+  criadaEm: string;
+  atualizadaEm: string;
 
-  // O diferencial do case: dependência explícita de outras áreas
-  aguardandoAreaId?: string; // preenchido quando status = 'aguardando_area'
+  aguardandoAreaId?: string;
   motivoEspera?: string;
-
-  // Critério de conclusão - resolve a dor de "o que significa encerrar"
   criterioConclusao: string;
 
   historico: EventoHistorico[];
 }
 
-// Campos derivados, calculados no client (não vêm do "banco")
 export interface PendenciaComputada extends Pendencia {
-  diasParada: number; // dias desde atualizadaEm
-  diasAberta: number; // dias desde criadaEm
-  estaAtrasada: boolean; // regra de negócio simples, ex: > 5 dias parada
+  diasParada: number;
+  diasAberta: number;
+  estaAtrasada: boolean;
 }

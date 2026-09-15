@@ -1,9 +1,8 @@
 import type { Pendencia, PendenciaComputada } from "./types";
 
-// Data de referência do sistema (troque por new Date() em produção)
 export const HOJE = new Date("2026-09-14T12:00:00Z");
 
-const LIMITE_DIAS_PARADA = 5; // regra simples: > 5 dias sem atualização = atrasada
+const LIMITE_DIAS_PARADA = 5;
 
 function diffEmDias(dataIso: string, referencia: Date): number {
   const data = new Date(dataIso);
@@ -14,7 +13,8 @@ function diffEmDias(dataIso: string, referencia: Date): number {
 export function computarPendencia(p: Pendencia): PendenciaComputada {
   const diasParada = diffEmDias(p.atualizadaEm, HOJE);
   const diasAberta = diffEmDias(p.criadaEm, HOJE);
-  const estaAtrasada = p.status !== "concluida" && diasParada > LIMITE_DIAS_PARADA;
+  const estaAtrasada =
+    p.status !== "concluida" && diasParada > LIMITE_DIAS_PARADA;
 
   return { ...p, diasParada, diasAberta, estaAtrasada };
 }

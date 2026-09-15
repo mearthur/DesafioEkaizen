@@ -28,8 +28,6 @@ export const pessoas: Pessoa[] = [
   { id: "p6", nome: "Bruno Castro", areaId: "a2" },
 ];
 
-// Data de referência considerada "hoje" nas telas: 2026-09-14
-
 export const pendencias: Pendencia[] = [
   {
     id: "pd1",
@@ -42,8 +40,8 @@ export const pendencias: Pendencia[] = [
     areaResponsavelId: "a1",
     status: "em_andamento",
     prioridade: "alta",
-    criadaEm: "2026-09-08T09:00:00Z", // era "2026-09-12T09:00:00Z"
-    atualizadaEm: "2026-09-10T14:00:00Z", // era "2026-09-13T14:00:00Z"
+    criadaEm: "2026-09-08T09:00:00Z",
+    atualizadaEm: "2026-09-10T14:00:00Z",
     criterioConclusao: "Equipamento religado e temperatura estável por 24h.",
     historico: [
       {
@@ -54,7 +52,7 @@ export const pendencias: Pendencia[] = [
       },
       {
         id: "h2",
-        data: "2026-09-10T14:00:00Z", // era "2026-09-13T14:00:00Z"
+        data: "2026-09-10T14:00:00Z",
         autorId: "p1",
         descricao: "Técnico acionado, peça de reposição solicitada.",
       },
@@ -70,8 +68,8 @@ export const pendencias: Pendencia[] = [
     areaResponsavelId: "a2",
     status: "aguardando_area",
     prioridade: "alta",
-    criadaEm: "2026-08-30T11:00:00Z", // era "2026-08-28T11:00:00Z"
-    atualizadaEm: "2026-09-06T10:00:00Z", // era "2026-08-30T16:00:00Z"
+    criadaEm: "2026-08-30T11:00:00Z",
+    atualizadaEm: "2026-09-06T10:00:00Z",
     aguardandoAreaId: "a3",
     motivoEspera:
       "TI precisa que o Comercial confirme com o fornecedor do PDV se houve mudança no contrato de integração.",
@@ -130,8 +128,8 @@ export const pendencias: Pendencia[] = [
     areaResponsavelId: "a1",
     status: "aberta",
     prioridade: "alta",
-    criadaEm: "2026-09-08T08:00:00Z", // era "2026-09-01T08:00:00Z"
-    atualizadaEm: "2026-09-08T08:00:00Z", // era "2026-09-01T08:00:00Z"
+    criadaEm: "2026-09-08T08:00:00Z",
+    atualizadaEm: "2026-09-08T08:00:00Z",
     criterioConclusao: "Reparo concluído e sem infiltração após 2 chuvas.",
     historico: [
       {
@@ -154,8 +152,8 @@ export const pendencias: Pendencia[] = [
     areaResponsavelId: "a2",
     status: "aguardando_area",
     prioridade: "media",
-    criadaEm: "2026-08-20T13:00:00Z", // sem mudança
-    atualizadaEm: "2026-08-30T10:00:00Z", // era "2026-08-22T10:00:00Z"
+    criadaEm: "2026-08-20T13:00:00Z",
+    atualizadaEm: "2026-08-30T10:00:00Z",
     aguardandoAreaId: "a4",
     motivoEspera:
       "TI depende do Financeiro validar as regras de conciliação antes de ajustar a integração.",
@@ -186,19 +184,19 @@ export const pendencias: Pendencia[] = [
     areaResponsavelId: "a2",
     status: "em_andamento",
     prioridade: "media",
-    criadaEm: "2026-09-11T15:00:00Z", // era "2026-09-13T15:00:00Z"
-    atualizadaEm: "2026-09-12T08:00:00Z", // era "2026-09-14T08:00:00Z"
+    criadaEm: "2026-09-11T15:00:00Z",
+    atualizadaEm: "2026-09-12T08:00:00Z",
     criterioConclusao: "6 câmeras gravando e visíveis no painel central.",
     historico: [
       {
         id: "h10",
-        data: "2026-09-11T15:00:00Z", // era "2026-09-13T15:00:00Z"
+        data: "2026-09-11T15:00:00Z",
         autorId: "p2",
         descricao: "Pendência criada.",
       },
       {
         id: "h11",
-        data: "2026-09-12T08:00:00Z", // era "2026-09-14T08:00:00Z"
+        data: "2026-09-12T08:00:00Z",
         autorId: "p2",
         descricao: "Diagnóstico iniciado remotamente.",
       },
@@ -214,8 +212,8 @@ export const pendencias: Pendencia[] = [
     areaResponsavelId: "a3",
     status: "aberta",
     prioridade: "baixa",
-    criadaEm: "2026-09-10T09:00:00Z", // era "2026-09-05T09:00:00Z"
-    atualizadaEm: "2026-09-10T09:00:00Z", // era "2026-09-05T09:00:00Z"
+    criadaEm: "2026-09-10T09:00:00Z",
+    atualizadaEm: "2026-09-10T09:00:00Z",
     criterioConclusao: "Treinamento realizado com toda a equipe da unidade.",
     historico: [
       {
